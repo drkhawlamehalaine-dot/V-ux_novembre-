@@ -1,0 +1,292 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>فجر أول نوفمبر</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Reem+Kufi:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: a single night-to-dawn scroll. Hero with flag over a rising horizon, then figures, timeline, the six leaders, a quote, and a signed greeting. Single committed dark look. */
+:root {
+  --night: #04130d;
+  --night-2: #0a2a1d;
+  --bone: #f1ecd9;
+  --muted: #9db8a9;
+  --leaf: #3fbf82;
+  --dawn: #f2d79a;
+  --line: rgba(241, 236, 217, 0.16);
+  --panel: rgba(241, 236, 217, 0.045);
+  --font-display: "Aref Ruqaa", "Amiri", "Noto Naskh Arabic", serif;
+  --font-kufi: "Reem Kufi", "Amiri", "Noto Naskh Arabic", sans-serif;
+  --font-body: "Amiri", "Noto Naskh Arabic", "Times New Roman", serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--night);
+  color: var(--bone);
+  font-family: var(--font-body);
+  direction: rtl;
+  margin: 0;
+  padding-block: 0 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  line-height: 1.9;
+  font-size: 1.15rem;
+  overflow-x: hidden;
+}
+#sky { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+main { position: relative; z-index: 1; max-width: 760px; margin-inline: auto; display: flex; flex-direction: column; gap: 64px; }
+section { min-width: 0; }
+h1, h2, h3, p { margin: 0; }
+h2 { font-family: var(--font-kufi); font-weight: 700; font-size: 1.6rem; color: var(--bone); text-wrap: balance; line-height: 1.4; }
+.eyebrow { font-family: var(--font-kufi); font-weight: 500; letter-spacing: .04em; color: var(--dawn); font-size: .95rem; }
+
+/* HERO */
+.hero { position: relative; padding-block: 56px 40px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px; isolation: isolate; }
+.hero::before {
+  content: ""; position: absolute; z-index: -1; left: 50%; bottom: -60px; width: 150%; aspect-ratio: 2 / 1; transform: translateX(-50%) scale(.85);
+  background: radial-gradient(ellipse at 50% 100%, rgba(242,215,154,.5) 0%, rgba(63,191,130,.28) 32%, rgba(10,42,29,0) 68%);
+  opacity: .55; transition: opacity 1.6s ease, transform 1.6s ease; pointer-events: none;
+}
+.hero.dawn::before { opacity: 1; transform: translateX(-50%) scale(1.15); }
+.year {
+  position: absolute; z-index: -1; top: 14px; left: 50%; transform: translateX(-50%);
+  font-family: var(--font-kufi); font-weight: 700; font-size: clamp(6rem, 30vw, 12rem); line-height: 1; letter-spacing: .02em;
+  color: transparent; -webkit-text-stroke: 1px rgba(241,236,217,.14); direction: ltr; user-select: none;
+}
+.flag { width: min(320px, 82%); height: auto; display: block; filter: drop-shadow(0 0 28px rgba(63,191,130,.35)); }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.6rem, 12vw, 4.2rem); line-height: 1.3; color: var(--bone); text-wrap: balance; }
+.lead { font-family: var(--font-display); font-size: clamp(1.6rem, 7vw, 2.2rem); color: var(--dawn); line-height: 1.5; text-wrap: balance; }
+.from { color: var(--muted); font-size: 1.1rem; max-width: 30em; text-wrap: balance; }
+.from b { color: var(--bone); font-family: var(--font-kufi); font-weight: 700; }
+button {
+  font-family: var(--font-kufi); font-size: 1rem; font-weight: 500; cursor: pointer;
+  color: var(--night); background: var(--dawn); border: 0; border-radius: 999px; padding: 11px 26px;
+}
+button.ghost { background: transparent; color: var(--bone); box-shadow: inset 0 0 0 1px var(--line); }
+button:hover { filter: brightness(1.08); }
+button:focus-visible { outline: 3px solid var(--bone); outline-offset: 3px; }
+
+/* FIGURES */
+.figs { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 22px; }
+.fig { background: var(--night); padding: 22px 14px 18px; text-align: center; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.fig strong { font-family: var(--font-kufi); font-weight: 700; font-size: 2.4rem; line-height: 1.1; color: var(--dawn); font-variant-numeric: tabular-nums; }
+.fig span { color: var(--muted); font-size: 1.02rem; line-height: 1.5; }
+.note { color: var(--muted); font-size: .95rem; margin-top: 12px; }
+
+/* TIMELINE */
+.tl { list-style: none; margin: 26px 0 0; padding: 0; display: flex; flex-direction: column; gap: 0; }
+.tl li { position: relative; padding: 0 30px 34px 0; border-right: 1px solid var(--line); margin-right: 7px; min-width: 0; }
+.tl li:last-child { border-right-color: transparent; padding-bottom: 0; }
+.tl li::before { content: ""; position: absolute; right: -8px; top: 9px; width: 15px; height: 15px; border-radius: 50%; background: var(--night); border: 2px solid var(--leaf); }
+.tl li.key::before { background: var(--dawn); border-color: var(--dawn); box-shadow: 0 0 0 5px rgba(242,215,154,.18); }
+.tl time { font-family: var(--font-kufi); font-weight: 700; color: var(--dawn); font-size: 1.1rem; display: block; }
+.tl h3 { font-family: var(--font-kufi); font-weight: 700; font-size: 1.2rem; color: var(--bone); line-height: 1.6; }
+.tl p { color: #cfd9cf; }
+
+/* LEADERS */
+.six { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin-top: 26px; }
+.who { border: 1px solid var(--line); background: var(--panel); padding: 16px 18px; border-radius: 6px; display: flex; flex-direction: column; gap: 0; min-width: 0; }
+.who small { font-family: var(--font-kufi); color: var(--leaf); font-size: .9rem; letter-spacing: .03em; }
+.who strong { font-family: var(--font-kufi); font-weight: 700; font-size: 1.3rem; line-height: 1.5; }
+.who span { color: var(--muted); font-size: 1.02rem; line-height: 1.6; }
+.cairo { color: var(--muted); margin-top: 16px; }
+
+/* QUOTE */
+.quote { text-align: center; padding-block: 8px; }
+.quote blockquote { margin: 0; font-family: var(--font-display); font-size: clamp(1.7rem, 7vw, 2.4rem); line-height: 1.7; color: var(--bone); text-wrap: balance; }
+.quote cite { display: block; margin-top: 12px; font-style: normal; font-family: var(--font-kufi); color: var(--dawn); }
+
+/* GREETING */
+.greet { border: 1px solid var(--line); border-radius: 6px; padding: 38px 22px 34px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; background: linear-gradient(180deg, rgba(63,191,130,.10), rgba(242,215,154,.07)); }
+.greet .big { font-family: var(--font-display); font-size: clamp(2rem, 9vw, 3rem); line-height: 1.5; color: var(--dawn); text-wrap: balance; }
+.greet p.msg { max-width: 30em; font-size: 1.25rem; line-height: 2; text-wrap: pretty; }
+.sig { margin-top: 6px; display: flex; flex-direction: column; align-items: center; }
+.sig small { color: var(--muted); font-size: 1.05rem; }
+.sig strong { font-family: var(--font-display); font-weight: 700; font-size: 2.1rem; color: var(--bone); line-height: 1.5; }
+.date { color: var(--muted); font-size: 1rem; }
+.status { min-height: 1.4em; color: var(--leaf); font-size: .95rem; }
+.glory { text-align: center; font-family: var(--font-kufi); color: var(--muted); font-size: 1rem; }
+
+@media (prefers-reduced-motion: reduce) { .hero::before { transition: none; } }
+</style>
+
+<canvas id="sky" aria-hidden="true"></canvas>
+
+<main lang="ar" dir="rtl">
+
+  <header class="hero" id="hero">
+    <div class="year" aria-hidden="true">1954</div>
+    <p class="eyebrow">فجر 1 نوفمبر 1954</p>
+
+    <svg class="flag" viewBox="0 0 300 200" role="img" aria-label="علم الجمهورية الجزائرية الديمقراطية الشعبية" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="crescent" maskUnits="userSpaceOnUse" x="0" y="0" width="300" height="200">
+          <rect width="300" height="200" fill="#000"/>
+          <circle cx="150" cy="100" r="48" fill="#fff"/>
+          <circle cx="162" cy="100" r="39" fill="#000"/>
+        </mask>
+      </defs>
+      <rect x="0" y="0" width="150" height="200" fill="#006233"/>
+      <rect x="150" y="0" width="150" height="200" fill="#ffffff"/>
+      <rect x="0" y="0" width="300" height="200" fill="#d21034" mask="url(#crescent)"/>
+      <polygon fill="#d21034" points="170,78 175.05,93.04 190.92,93.2 178.18,102.66 182.93,117.8 170,108.6 157.07,117.8 161.82,102.66 149.08,93.2 164.95,93.04"/>
+    </svg>
+
+    <h1>فجر أول نوفمبر</h1>
+    <p class="lead">كل عام والجزائر بخير</p>
+    <p class="from">تهنئة خاصة من <b>خولة محل عين</b> بمناسبة الذكرى الثانية والسبعين لاندلاع الثورة التحريرية المباركة</p>
+    <button type="button" id="dawnBtn" aria-pressed="false">أضئ الفجر</button>
+  </header>
+
+  <section aria-labelledby="h-num">
+    <p class="eyebrow">في ليلة واحدة</p>
+    <h2 id="h-num">كم كانوا، وكم دام الكفاح؟</h2>
+    <div class="figs">
+      <div class="fig"><strong>6</strong><span>قادة تاريخيين قرروا الانطلاق</span></div>
+      <div class="fig"><strong>5</strong><span>مناطق قُسّمت إليها البلاد</span></div>
+      <div class="fig"><strong>~30</strong><span>عملية متزامنة عبر التراب الوطني</span></div>
+      <div class="fig"><strong>~1200</strong><span>مجاهد بأسلحة قليلة وإيمان كبير</span></div>
+      <div class="fig"><strong>7.5</strong><span>سنوات من الكفاح حتى الاستقلال</span></div>
+      <div class="fig"><strong>1.5 م</strong><span>مليون ونصف مليون شهيد</span></div>
+    </div>
+    <p class="note">الأرقام تقريبية، وتختلف قليلا بحسب المصادر التاريخية.</p>
+  </section>
+
+  <section aria-labelledby="h-how">
+    <p class="eyebrow">كيف كانت البداية</p>
+    <h2 id="h-how">من اجتماع سري إلى فجر لا يُنسى</h2>
+    <ol class="tl">
+      <li>
+        <time>25 جوان 1954</time>
+        <h3>اجتماع مجموعة الـ22 بالمرادية</h3>
+        <p>اجتمع 22 مناضلا في العاصمة، وقرروا المرور إلى العمل المسلح بعد أن أُغلقت أبواب الحل السياسي.</p>
+      </li>
+      <li>
+        <time>23 أكتوبر 1954</time>
+        <h3>اجتماع الستة ببولوغين</h3>
+        <p>حدّد القادة الستة ساعة الصفر، وقسّموا البلاد إلى خمس مناطق، وأعلنوا اسم جبهة التحرير الوطني وجيش التحرير الوطني.</p>
+      </li>
+      <li class="key">
+        <time>1 نوفمبر 1954 · الفجر</time>
+        <h3>انطلاق الثورة</h3>
+        <p>في الأوراس والشمال القسنطيني والقبائل والوسط ووهران، هاجم المجاهدون ثكنات ومراكز عسكرية ومنشآت استعمارية في الوقت نفسه، لتبدأ حرب التحرير.</p>
+      </li>
+      <li>
+        <time>1 نوفمبر 1954</time>
+        <h3>بيان أول نوفمبر</h3>
+        <p>أُذيع البيان من القاهرة عبر إذاعة صوت العرب، ودعا الشعب إلى الالتفاف حول الجبهة، وحدّد الهدف: الاستقلال الوطني بإقامة دولة جزائرية ديمقراطية اجتماعية ذات سيادة، في إطار المبادئ الإسلامية.</p>
+      </li>
+      <li>
+        <time>5 جويلية 1962</time>
+        <h3>الاستقلال</h3>
+        <p>بعد 132 سنة من الاستعمار وسبع سنوات ونصف من الثورة، رُفع العلم الجزائري عاليا.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="h-who">
+    <p class="eyebrow">من هم</p>
+    <h2 id="h-who">القادة الستة الذين أشعلوا الفجر</h2>
+    <div class="six">
+      <div class="who"><small>المنطقة الأولى</small><strong>مصطفى بن بولعيد</strong><span>الأوراس</span></div>
+      <div class="who"><small>المنطقة الثانية</small><strong>مراد ديدوش</strong><span>الشمال القسنطيني</span></div>
+      <div class="who"><small>المنطقة الثالثة</small><strong>كريم بلقاسم</strong><span>القبائل</span></div>
+      <div class="who"><small>المنطقة الرابعة</small><strong>رابح بيطاط</strong><span>الجزائر الوسطى</span></div>
+      <div class="who"><small>المنطقة الخامسة</small><strong>العربي بن مهيدي</strong><span>وهران</span></div>
+      <div class="who"><small>التنسيق</small><strong>محمد بوضياف</strong><span>الربط بين المناطق والوفد الخارجي</span></div>
+    </div>
+    <p class="cairo">وفي القاهرة حمل الوفد الخارجي صوت الثورة إلى العالم: أحمد بن بلة وحسين آيت أحمد ومحمد خيضر.</p>
+  </section>
+
+  <section class="quote" aria-label="مقولة">
+    <blockquote>«ألقوا بالثورة إلى الشارع، يحتضنها الشعب»</blockquote>
+    <cite>الشهيد العربي بن مهيدي</cite>
+  </section>
+
+  <section class="greet" aria-labelledby="h-greet">
+    <p class="eyebrow">تهنئة</p>
+    <h2 id="h-greet" class="big">كل عام وأنتم بخير</h2>
+    <p class="msg">قبل اثنتين وسبعين سنة، خرج رجال قلائل في ليل دامس بسلاح قليل وإيمان كبير، فأشرق على الجزائر فجر لا يغيب. نجدد العهد لشهدائنا الأبرار، ونسأل الله أن تبقى الجزائر حرة عزيزة آمنة، وأن يجمع شملنا على حبها.</p>
+    <div class="sig">
+      <small>مع أطيب التمنيات</small>
+      <strong>خولة محل عين</strong>
+    </div>
+    <p class="date">الأحد 1 نوفمبر 2026</p>
+    <button type="button" class="ghost" id="copy">نسخ نص التهنئة</button>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+  </section>
+
+  <p class="glory">المجد والخلود لشهدائنا الأبرار</p>
+</main>
+
+<script>
+(function () {
+  /* Stars */
+  var cv = document.getElementById("sky");
+  var ctx = cv.getContext("2d");
+  function draw() {
+    var w = cv.width = window.innerWidth;
+    var h = cv.height = window.innerHeight;
+    var g = ctx.createLinearGradient(0, 0, 0, h);
+    g.addColorStop(0, "#04130d");
+    g.addColorStop(1, "#0a2a1d");
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, w, h);
+    var n = Math.round(w * h / 5500);
+    var seed = 7;
+    function rnd() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
+    for (var i = 0; i < n; i++) {
+      var x = rnd() * w, y = rnd() * h, r = rnd() * 1.3 + 0.2, a = rnd() * 0.6 + 0.15;
+      ctx.beginPath();
+      ctx.fillStyle = "rgba(241,236,217," + a.toFixed(2) + ")";
+      ctx.arc(x, y, r, 0, 6.2832);
+      ctx.fill();
+    }
+  }
+  draw();
+  window.addEventListener("resize", draw);
+
+  /* Dawn */
+  var hero = document.getElementById("hero");
+  var dBtn = document.getElementById("dawnBtn");
+  dBtn.addEventListener("click", function () {
+    var on = hero.classList.toggle("dawn");
+    dBtn.setAttribute("aria-pressed", on ? "true" : "false");
+    dBtn.textContent = on ? "أعد الليل" : "أضئ الفجر";
+  });
+
+  /* Copy */
+  var status = document.getElementById("status");
+  var text = [
+    "فجر أول نوفمبر",
+    "كل عام وأنتم بخير",
+    "",
+    "قبل اثنتين وسبعين سنة، خرج رجال قلائل في ليل دامس بسلاح قليل وإيمان كبير، فأشرق على الجزائر فجر لا يغيب. نجدد العهد لشهدائنا الأبرار، ونسأل الله أن تبقى الجزائر حرة عزيزة آمنة، وأن يجمع شملنا على حبها.",
+    "",
+    "المجد والخلود لشهدائنا الأبرار",
+    "",
+    "مع أطيب التمنيات",
+    "خولة محل عين",
+    "الأحد 1 نوفمبر 2026"
+  ].join("\n");
+  function fallback() {
+    var ta = document.createElement("textarea");
+    ta.value = text; ta.setAttribute("readonly", "");
+    ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    var ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) {}
+    document.body.removeChild(ta);
+    return ok;
+  }
+  function done(ok) { status.textContent = ok ? "تم نسخ النص" : "تعذر النسخ، حدد النص يدويا"; }
+  document.getElementById("copy").addEventListener("click", function () {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(fallback()); });
+    } else { done(fallback()); }
+  });
+})();
+</script>
+
+</body></html>
